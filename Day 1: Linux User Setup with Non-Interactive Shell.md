@@ -91,12 +91,14 @@ Before creating a user, always check if it already exists:
 cat /etc/passwd | grep siva
 ```
 No output confirms the user does not exist.
-
 Then, create the user siva with no login shell
 
 ```bash
 sudo useradd --shell /sbin/nologin siva
 ```
+
+![Step 3](day-1-crop/step-3.png)
+
 
 ### Explanation
 
