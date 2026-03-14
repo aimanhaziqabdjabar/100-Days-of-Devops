@@ -107,7 +107,7 @@ After this command executes successfully, the user account will be created and c
 To confirm that the expiry date has been set correctly, use the following command:
 
 ```bash
-sudo chage -l siva
+cat /etc/passwd | grep siva
 ```
 
 This command displays the **account aging information** for the user.
@@ -119,47 +119,13 @@ This command displays the **account aging information** for the user.
 Example output of the verification command:
 
 ```
-Last password change                                    : never
-Password expires                                        : never
-Password inactive                                       : never
-Account expires                                         : Mar 28, 2027
-Minimum number of days between password change          : 0
-Maximum number of days between password change          : 99999
-Number of days of warning before password expires       : 7
+siva:x:1002:1002: : /home/siva: /sbin/nologin
 ```
-
-The important field is:
-
-```
-Account expires : Mar 28, 2027
-```
-
-This confirms that the account will automatically expire on the configured date.
-
 ---
 
 ## ✅ Result
 
-The task was successfully completed with the following outcomes:
-
-* Temporary user **siva** was created on **App Server 3**
-* The account was configured with an **expiry date of 2027-03-28**
-* The configuration was verified using the `chage -l` command
-* The system will automatically **disable the account after the expiry date**
-
----
-
-## 🔎 Best Practices for User Management
-
-When managing user accounts in Linux servers, it is recommended to:
-
-* Always assign **expiry dates for temporary users**
-* Follow the **principle of least privilege**
-* Regularly audit user accounts
-* Disable or remove **unused accounts**
-* Implement **centralized identity management** in large environments
-
-These practices help maintain **secure and manageable infrastructure**.
+The task was successfully completed.
 
 ---
 
@@ -173,21 +139,6 @@ From completing this task, the following Linux administration skills were practi
 * Working with remote servers via SSH
 
 These skills are fundamental for **System Administrators**, **DevOps Engineers**, and **Cloud Engineers**.
-
----
-
-## 🚀 Part of
-
-**KodeKloud – 100 Days of DevOps Challenge**
-
-This challenge focuses on building practical DevOps skills through real-world infrastructure tasks including:
-
-* Linux Administration
-* Networking
-* Security
-* Containers
-* Kubernetes
-* Automation
 
 ---
 
