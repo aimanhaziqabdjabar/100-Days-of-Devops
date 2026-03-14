@@ -68,14 +68,13 @@ In production environments, many companies integrate this approach with **identi
 
 ### Step 1: Connect to the App Server
 
-First, connect to **App Server 3** using SSH.
+First, connect to **App Server 2** using SSH.
 
 ```bash
-ssh banner@172.16.238.12
+ssh steve@172.16.238.11
 ```
 
 After successful authentication, you will gain access to the remote Linux server where the user account will be created.
-
 
 ---
 
@@ -141,7 +140,7 @@ This confirms that the account will automatically expire on the configured date.
 
 The task was successfully completed with the following outcomes:
 
-* Temporary user **jim** was created on **App Server 3**
+* Temporary user **jim** was created on **App Server 2**
 * The account was configured with an **expiry date of 2027-03-28**
 * The configuration was verified using the `chage -l` command
 * The system will automatically **disable the account after the expiry date**
