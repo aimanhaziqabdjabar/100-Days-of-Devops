@@ -77,8 +77,6 @@ ssh banner@172.16.238.12 or ssh banner@stapp3
 
 After successful authentication, you will gain access to the remote Linux server where the user account will be created.
 
-
-
 ---
 
 ### Step 2: Create the Temporary User
@@ -90,10 +88,10 @@ cat /etc/passwd | grep siva
 ```
 No output confirms the user does not exist.
 
-Then Create the user `siva` and set the account expiration date using the `-e` option.
+Then, create the user siva with no login shell
 
 ```bash
-sudo useradd -e 2027-03-28 siva
+sudo useradd --shell /sbin/nologin siva
 ```
 
 ### Explanation
@@ -102,8 +100,7 @@ sudo useradd -e 2027-03-28 siva
 | ------------ | ---------------------------------------------- |
 | `sudo`       | Run the command with administrative privileges |
 | `useradd`    | Command used to create new users               |
-| `-e`         | Specifies the account expiration date          |
-| `2027-03-28` | Expiry date in `YYYY-MM-DD` format             |
+| `-s /sbin/nologin`| Set login shell to /sbin/nologin to prevent interactive login|
 | `siva`        | Username to be created                         |
 
 After this command executes successfully, the user account will be created and configured with the specified expiry date.
