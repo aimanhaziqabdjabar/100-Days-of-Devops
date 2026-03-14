@@ -1,0 +1,25 @@
+Temporary User Creation with Expiry
+Part of the KodeKloud 100 Days of DevOps Challenge
+
+📝 Task Description
+As part of the Nautilus project, a temporary user account for a developer named jim was required on App Server 2. To maintain security compliance, the account needed a hard expiry date of 2027-03-28.
+
+🛠️ Infrastructure Details
+Server: stapp02 (App Server 2)
+
+Hostname: stapp02.stratos.xfusioncorp.com
+
+Target User: jim (Lowercase)
+
+Expiry Date: 2027-03-28
+
+💻 Implementation
+SSH to Server: ssh steve@172.16.238.11
+
+Create User with Expiry: ```bash
+sudo useradd -e 2027-03-28 jim
+
+Verify Configuration:
+
+Bash
+sudo chage -l jim
