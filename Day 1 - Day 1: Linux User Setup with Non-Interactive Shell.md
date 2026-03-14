@@ -31,10 +31,10 @@ This type of configuration helps organizations follow **security best practices*
 | Parameter     | Value                             |
 | ------------- | --------------------------------- |
 | Environment   | Nautilus Project Lab              |
-| Server Name   | stapp02                           |
-| Server Role   | App Server 2                      |
-| Hostname      | `stapp02.stratos.xfusioncorp.com` |
-| Target User   | `jim`                             |
+| Server Name   | stapp03                           |
+| Server Role   | App Server 3                      |
+| Hostname      | `stapp03.stratos.xfusioncorp.com` |
+| Target User   | `siva`                             |
 | Expiry Date   | `2027-03-28`                      |
 | Access Method | SSH                               |
 
