@@ -81,7 +81,7 @@ After successful authentication, you will gain access to the remote Linux server
 
 ### Step 2: Create the Temporary User
 
-Create the user `siva` and set the account expiration date using the `-e` option.
+Create the user `jim` and set the account expiration date using the `-e` option.
 
 ```bash
 sudo useradd -e 2027-03-28 jim
@@ -106,7 +106,7 @@ After this command executes successfully, the user account will be created and c
 To confirm that the expiry date has been set correctly, use the following command:
 
 ```bash
-sudo chage -l siva
+sudo chage -l jim
 ```
 
 This command displays the **account aging information** for the user.
@@ -141,7 +141,7 @@ This confirms that the account will automatically expire on the configured date.
 
 The task was successfully completed with the following outcomes:
 
-* Temporary user **siva** was created on **App Server 3**
+* Temporary user **jim** was created on **App Server 3**
 * The account was configured with an **expiry date of 2027-03-28**
 * The configuration was verified using the `chage -l` command
 * The system will automatically **disable the account after the expiry date**
