@@ -70,6 +70,7 @@ In production environments, many companies integrate this approach with **identi
 
 First, connect to **App Server 3** using SSH.
 
+
 ```bash
 ssh banner@172.16.238.12 or ssh banner@stapp3
 ```
@@ -82,10 +83,17 @@ After successful authentication, you will gain access to the remote Linux server
 
 ### Step 2: Create the Temporary User
 
-Create the user `siva` and set the account expiration date using the `-e` option.
+Before creating a user, always check if it already exists:
 
 ```bash
-sudo useradd -e 2027-03-28 jim
+cat /etc/passwd | grep siva
+```
+No output confirms the user does not exist.
+
+Then Create the user `siva` and set the account expiration date using the `-e` option.
+
+```bash
+sudo useradd -e 2027-03-28 siva
 ```
 
 ### Explanation
@@ -96,7 +104,7 @@ sudo useradd -e 2027-03-28 jim
 | `useradd`    | Command used to create new users               |
 | `-e`         | Specifies the account expiration date          |
 | `2027-03-28` | Expiry date in `YYYY-MM-DD` format             |
-| `jim`        | Username to be created                         |
+| `siva`        | Username to be created                         |
 
 After this command executes successfully, the user account will be created and configured with the specified expiry date.
 
