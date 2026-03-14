@@ -53,17 +53,6 @@ In production environments, many companies integrate this approach with **identi
 
 ---
 
-## 🧰 Tools & Commands Used
-
-| Command      | Description                                         |
-| ------------ | --------------------------------------------------- |
-| `ssh`        | Used to connect to the remote server                |
-| `useradd`    | Creates a new Linux user                            |
-| `useradd -e` | Creates a user with a specified account expiry date |
-| `chage -l`   | Displays account aging information                  |
-
----
-
 ## 💻 Implementation Steps
 
 ### Step 1: Connect to the App Server
@@ -106,7 +95,7 @@ sudo useradd --shell /sbin/nologin siva
 | ------------ | ---------------------------------------------- |
 | `sudo`       | Run the command with administrative privileges |
 | `useradd`    | Command used to create new users               |
-| `-s /sbin/nologin`| Set login shell to /sbin/nologin to prevent interactive login|
+| `-shell /sbin/nologin`| Set login shell to /sbin/nologin to prevent interactive login|
 | `siva`        | Username to be created                         |
 
 After this command executes successfully, the user account will be created and configured with the specified expiry date.
