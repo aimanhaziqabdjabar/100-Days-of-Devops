@@ -77,6 +77,8 @@ ssh banner@172.16.238.12 or ssh banner@stapp3
 
 After successful authentication, you will gain access to the remote Linux server where the user account will be created.
 
+![Step 1](Day 1 Crop/Step 1.png)
+
 ---
 
 ### Step 2: Create the Temporary User
