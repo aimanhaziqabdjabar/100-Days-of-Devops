@@ -87,7 +87,6 @@ sudo useradd --shell /sbin/nologin siva
 ```
 
 ![Step 3](day-1-crop/step-3.png)
-![Step 3](day-1-crop/step-4.png)
 
 ### Explanation
 
